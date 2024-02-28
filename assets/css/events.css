@@ -1,0 +1,104 @@
+/* Melanie Boncaro, 10/13/2023, ISTE.240 - Individual Project Part 1 
+ * Style for All Events page and Individual Event pages
+ */
+
+.event_sub_wrapper {
+    /* margin: 0 24px 100px 24px; */
+    margin: 0 auto 80px auto;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 50%;
+}
+
+.event_sub_wrapper h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.event_img {
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    background-size: cover;
+    background-position: center;
+}
+
+#pumpkin_event {
+    background-image: url("../media/event_images/niki-clark-UcXu1um0ov8-unsplash.jpg");
+}
+#cider_event {
+    background-image: url("../media/event_images/james-yarema-P2X7NDx_GP0-unsplash.jpg");
+}
+#electric_event {
+    background-image: url("../media/event_images/gotrax-_WE4BX2k7PY-unsplash.jpg");
+}
+#book_event {
+    background-image: url("../media/event_images/tom-hermans-9BoqXzEeQqM-unsplash.jpg");
+}
+
+/* .registration_holder div {
+    margin-bottom: 100px;
+} */
+
+.details h2 {
+    margin: 0;
+}
+
+.details div {
+    background-color: #dbf4fc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-block: 24px;
+    /* width: fit-content; */
+}
+
+.details h3, .details p {
+    margin-block: 8px;
+}
+
+.registration {
+    display: flex;
+    flex-direction: column;
+}
+
+.events_wrapper {
+    margin: 0 24px;
+}
+
+.events_wrapper .date {
+    color: #4298b8;
+}
+
+.event_content .desc{
+    width: 500px;
+}
+
+.event_content div {
+    margin-bottom: 32px;
+}
+
+.event {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 64px;
+    border-left: 2px solid #4298b8;
+    padding-left: 8px;
+}
+
+/* for larger screens */
+@media screen and (min-width: 1000px) {
+    .event_sub_wrapper, .events_wrapper {
+        margin-inline: 20%;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    .event_sub_wrapper {
+        width: auto;
+        margin: 0 0 80px 0;
+        padding-inline: 24px;
+    }
+}

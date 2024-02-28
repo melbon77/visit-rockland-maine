@@ -1,0 +1,80 @@
+/* Melanie Boncaro, 10/13/2023, ISTE.240 - Individual Project Part 1 
+ * Style for All Places to Visit page and Individual Place page
+ */
+
+/* All Places page */
+.places_wrapper {
+    margin: 0 24px 100px 24px
+}
+
+.places_holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    row-gap: 120px;
+    align-items: center;
+}
+
+.places_wrapper .place_img {
+    background-size: cover;
+    background-position: center;
+    box-shadow: 8px 8px #2c4b7f;
+    border-radius: 8px;
+    height: 300px;
+}
+
+
+/* Individual Place pages */
+
+/* Individual page images */
+#breakwater_hero_img {background-image: url("https://solace.ist.rit.edu/~mb2317/ISTE240/part2_final/assets/media/karl-magnuson-vq_MtuXhdUs-unsplash.jpg");}
+#farnsworth_hero_img {background-image: url("../media/farnsworth.jpg");}
+
+.place_sub_wrapper h1 {
+    font-size: 64px;
+    margin: 0;
+}
+
+.place_sub_wrapper .content_sections_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.place_sub_wrapper {
+    margin-bottom: 100px;
+}
+
+.place_sections_wrapper {
+    margin: 50px;
+}
+
+.place_hero_img {
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 6px 6px #b8d3de;
+}
+
+.place_hero_txt {
+    padding-bottom: 40px;
+}
+
+.place_details {
+    border-left: 2px solid #000;
+    padding-left: 16px;
+}
+
+
+/* for larger screens */
+@media screen and (min-width: 1000px) {
+    .places_wrapper {
+        margin-inline: 20%;
+    } 
+}
+
+/* for smaller screens */
+@media screen and (max-width: 600px) {
+    .place_hero_txt h1 {
+        font-size: 40px;
+    }
+    
+}

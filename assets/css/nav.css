@@ -1,0 +1,167 @@
+/* Melanie Boncaro
+ * ISTE.240: Individual Project Part 2 
+ * 12/10/2023
+ */
+
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    /* width: 95%; */
+    background-color: #ffffffe8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 24px;
+    z-index: 1;
+}
+
+.navbar > * {
+    display: flex;
+    align-items: center;    /* Centers home btn vertically */
+    min-height: 100%;
+}
+
+.home_link img {
+    height: 56px;
+    padding: 8px 8px 8px 0;
+}
+
+.home_link a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.other_links {
+    gap: 32px;
+    align-self: center;
+}
+
+.other_links a {
+    color: #7a8d94;
+    text-decoration: none;
+    font-weight: 400;
+    transition: 300ms ease;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.dropdown_btn {
+    line-height: 64px;
+}
+
+.dropdown_btn:hover, #about_btn:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.dropdown_items {
+    display: none;
+    position: absolute;
+    right: 0px;
+    left: auto;
+    background-color: #efefef;
+    box-shadow: 2px 2px 8px #00000047;
+    /* margin-top: 16px; */
+    /* padding: 4px 8px; */
+    min-width: 250px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.dropdown_items a {
+    display: block;
+    padding: 8px 26px;
+    border-radius: 8px;
+}
+
+.dropdown_items p {
+    padding-inline: 16px;
+}
+
+.dropdown_items a:hover {
+    background-color: #d4d4d4;
+    color: #000;
+}
+
+.dropdown:hover .dropdown_items {display: block;}
+
+
+#menu_btn {
+    display: none;
+    /* width: 24px;
+    height: 24px; */
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 2px 2px 8px #606f7472;
+    }
+
+    #menu_btn {
+        display: block;
+    }
+
+    .other_links {
+        display: none;
+    }
+    .other_links > *:hover {
+        text-decoration: none;
+    }
+    .other_links.open {
+        margin-block: 24px;
+    }
+    .other_links.open a {
+        color: #000;
+    }
+    .other_links.open {
+        display: block;
+        align-self: normal;
+    }
+    .other_links.open .dropdown .dropdown_items{
+        display: block;
+    }
+    .dropdown {
+        position: static;
+        margin-bottom: 24px;
+    }
+    .dropdown_btn, #about_btn {
+        background-color: #efefef;
+        display: block;
+        line-height: normal;
+        width: fit-content;
+        /* margin-block: 24px 8px; */
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+    .dropdown_items {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .dropdown_items p {
+        color: #93a1a7;
+        margin: 0;
+        padding: 8px 16px;
+    }
+    .dropdown_items p:not(:first-child) {
+        padding-top: 16px;
+    }
+    .dropdown_items a {
+        color: #000;
+        padding: 6px 24px;
+    }
+}
